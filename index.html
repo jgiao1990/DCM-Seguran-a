@@ -9,14 +9,13 @@
   <meta name="keywords" content="alarmes ajax, cctv hikvision, seguranâa, instalacão de alarmes, videovigilância, segurança residencial, segurança empresarial, seixal, arrentela, lisboa" />
   <meta name="author" content="DC Multiserviços" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://dcmseguranca.netlify.app/" />
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://dcmseguranca.netlify.app/sitemap.xml" />
-  <meta name="google-site-verification" content="5uwdfBfU3_rLgdqsZlnbry-6tBJ31VXHa8p3qtfOC_w" />
+  <link rel="canonical" href="https://dcmseguranca.vercel.app/" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://dcmseguranca.vercel.app/sitemap.xml" />
 
   <meta property="og:title" content="DC Multiserviços - Alarmes Ajax & CCTV Hikvision" />
   <meta property="og:description" content="Instalação profissional de alarmes Ajax e câmaras Hikvision. Proteja a sua casa ou empresa com segurança certificada." />
-  <meta property="og:image" content="https://dcmseguranca.netlify.app/logo-dc-multiservicos.png" />
-  <meta property="og:url" content="https://dcmseguranca.netlify.app/" />
+  <meta property="og:image" content="https://dcmseguranca.vercel.app/logo-dc-multiservicos.png" />
+  <meta property="og:url" content="https://dcmseguranca.vercel.app/" />
   <meta property="og:type" content="website" />
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -109,8 +108,7 @@
         <strong class="form-title">Orçamento rápido</strong>
         <p class="muted form-description">Preencha o formulário e entraremos em contacto em até 24h.</p>
 
-        <form name="DCM Segurança - Pedido de Contacto" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="DCM Segurança - Pedido de Contacto">
+        <form name="DCM Segurança - Pedido de Contacto" method="POST" action="https://formspree.io/f/mnngbnza">
           <label for="lead-name" class="sr-only">Nome completo</label>
           <input id="lead-name" name="name" placeholder="Nome completo" required />
           <label for="lead-email" class="sr-only">E-mail</label>
@@ -185,29 +183,5 @@
       <div class="muted"> 2025 DC Multiserviços - Todos os direitos reservados</div>
     </footer>
   </main>
-
-  <script>
-    const form = document.querySelector('form[name="DCM Segurança - Pedido de Contacto"]');
-    const successMessage = document.getElementById('success');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const formData = new FormData(form);
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
-      })
-      .then(() => {
-        successMessage.style.display = 'block';
-        form.style.display = 'none'; // Opcional: esconde o formulário após o envio
-        setTimeout(() => { // Opcional: esconde a mensagem após alguns segundos
-          successMessage.style.display = 'none';
-          form.style.display = 'flex';
-          form.reset();
-        }, 5000);
-      })
-      .catch(() => alert('Ocorreu um erro. Tente novamente.'));
-    });
-  </script>
 </body>
 </html>
